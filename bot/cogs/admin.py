@@ -88,7 +88,7 @@ class TicketView(discord.ui.View):
             cur.close()
             conn.close()
 
-        exclusive_role_mention = "<@&1447395230646140999>"
+        exclusive_role_mention = ""
 
         await interaction.response.send_message(
             f"Ticket criado brother: {channel.mention}",
@@ -121,13 +121,13 @@ class Admin(commands.Cog):
         embed = discord.Embed(
             title="Sistema de Suporte SPHB",
             description=(
-                "Boas vindas ao Sistema de Suporte Profissional da Spider Hub via **tickets**!\n\n"
+                "Boas vindas ao Sistema de Suporte Profissional via **tickets**!\n\n"
                 "Para saber mais sobre a função dos tickets, selecione abaixo no **Select Menu** "
                 "o tipo de ajuda que você quer."
             ),
             color=0xFFFFFF,
         )
-        embed.set_footer(text="Sistema de Suporte SPHB feito por Salvador")
+        embed.set_footer(text="Sistema de Suporte feito por Salvador")
 
         view = TicketView()
 
