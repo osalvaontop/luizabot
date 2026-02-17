@@ -12,23 +12,13 @@ class TicketView(discord.ui.View):
         super().__init__(timeout=None)
 
     @discord.ui.select(
-        placeholder="Selecione uma opção de atendimento.",
+        placeholder="Selecione uma opção...",
         custom_id="ticket_select",
         options=[
             discord.SelectOption(
-                label="Denunciar",
-                description="Reportar algo para a staff",
-                value="denúncia",
-            ),
-            discord.SelectOption(
-                label="Sugestão",
-                description="Enviar uma ideia ou sugestão",
-                value="sugestão",
-            ),
-            discord.SelectOption(
-                label="Suporte",
-                description="Precisa de ajuda?",
-                value="suporte",
+                label="Escolher Vaga",
+                description="Escolha a sua vaga",
+                value="vaga",
             ),
         ],
     )
