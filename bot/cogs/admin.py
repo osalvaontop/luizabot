@@ -40,9 +40,9 @@ class TicketView(discord.ui.View):
         guild = interaction.guild
 
         # 📁 Categoria
-        category = discord.utils.get(guild.categories, name=""❄𝅙𝅙𝅙₊˚𝅙𝅙𝗥ᧉ𝐜ꫀׁׅ𝐩ᥴ̨ã𑄝ׁ‧𝅙𝅙𝅙₊˚ ``𝅙𝅙𓈓𝅙𝄒𝅙"")
+        category = discord.utils.get(guild.categories, name=""𝅙𝅙𝅙₊˚𝅙𝅙𝗥ᧉ𝐜ꫀׁׅ𝐩ᥴ̨ã𑄝ׁ‧𝅙𝅙𝅙₊˚ ``𝅙𝅙𓈓𝅙𝄒𝅙"")
         if category is None:
-            category = await guild.create_category(""❄𝅙𝅙𝅙₊˚𝅙𝅙𝗥ᧉ𝐜ꫀׁׅ𝐩ᥴ̨ã𑄝ׁ‧𝅙𝅙𝅙₊˚ ``𝅙𝅙𓈓𝅙𝄒𝅙"")
+            category = await guild.create_category(""𝅙𝅙𝅙₊˚𝅙𝅙𝗥ᧉ𝐜ꫀׁׅ𝐩ᥴ̨ã𑄝ׁ‧𝅙𝅙𝅙₊˚ ``𝅙𝅙𓈓𝅙𝄒𝅙"")
 
         # 🔐 Permissões
         overwrites = {
