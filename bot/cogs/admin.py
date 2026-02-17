@@ -80,15 +80,15 @@ class TicketView(discord.ui.View):
             conn = get_conn()
             cur = conn.cursor()
             cur.execute(
-                "INSERT INTO tickets (user_id, channel_id, type) VALUES (%s, %s, %s)",
-                (str(interaction.user.id), str(channel.id), ticket_type),
-            )
+            "INSERT INTO tickets (user_id, channel_id, type) VALUES (?, ?, ?)",
+            (str(interaction.user.id), str(channel.id), ticket_type),
+             )
             conn.commit()
         finally:
             cur.close()
             conn.close()
 
-        exclusive_role_mention = "<@&1447395230646140999>"
+        exclusive_role_mention = ""
 
         await interaction.response.send_message(
             f"Ticket criado brother: {channel.mention}",
@@ -146,7 +146,7 @@ class Admin(commands.Cog):
         cur = conn.cursor()
 
         cur.execute(
-            "SELECT id FROM tickets WHERE channel_id = %s",
+            "SELECT id FROM tickets WHERE channel_id = ?",
             (str(ctx.channel.id),),
         )
         result = cur.fetchone()
@@ -163,7 +163,7 @@ class Admin(commands.Cog):
             return
 
         cur.execute(
-            "DELETE FROM tickets WHERE channel_id = %s",
+            "DELETE FROM tickets WHERE channel_id = ?",
             (str(ctx.channel.id),),
         )
         conn.commit()
