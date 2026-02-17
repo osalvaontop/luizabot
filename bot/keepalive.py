@@ -8,7 +8,7 @@ def home():
     return "Bot rodando 24/7 com sucesso."
 
 def run():
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=0505)
 
 def keep_alive():
     t = Thread(target=run)
