@@ -19,7 +19,7 @@ class RizeBot(commands.Bot):
             command_prefix=",",
             intents=intents,
             help_command=None,
-            activity=discord.Game(name="resenha confirmada")
+            activity=discord.Game(name="bot para tickets")
         )
 
     async def setup_hook(self):
