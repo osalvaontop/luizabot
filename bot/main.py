@@ -46,5 +46,6 @@ class RizeBot(commands.Bot):
 
 
 keep_alive()
+bot = RizeBot()
 TOKEN = os.getenv("DISCORD_TOKEN")
 bot.run(TOKEN)
